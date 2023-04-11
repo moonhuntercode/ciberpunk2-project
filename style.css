@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+}
+.buttonsContainer {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  height: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid black;
+  border-radius: 50px;
+}
+.character {
+  width: 100%;
+  box-sizing: border-box;
+}
+.character > img {
+  width: 100%;
+}
+#corazoncito:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+#corazoncito:active {
+  transform: scale(0.7);
+}
+#estrellita:hover {
+  cursor: pointer;
+
+  transform: scale(1.3);
+}
+hr {
+  border: 2px solid black;
+}
+/* SVG SELECTORS */
+.fondo {
+  /* transition: reverse 3s; */
+  fill: none;
+  /* animation: disolver infinite 3s; */
+}
+.borde {
+  fill: #707070;
+}
+@keyframes disolver {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
