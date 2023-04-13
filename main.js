@@ -1,6 +1,22 @@
 window.onload = () => {
   let corazon = document.getElementById("corazoncito");
   let fondo = document.querySelector(".fondo");
+  let estrellita = document.querySelector("#estrellita");
+
+  const formulario = document.querySelector(".formularioContainer");
+  estrellita.addEventListener("click", () => {
+    console.log(formulario.style.visibility);
+
+    if (
+      !formulario.style.visibility ||
+      formulario.style.visibility == "visible"
+    ) {
+      formulario.style.visibility = "hidden";
+    } else {
+      formulario.style.visibility = "visible";
+    }
+  });
+
   corazon.addEventListener("click", () => {
     changeColor();
   });

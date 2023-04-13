@@ -11,20 +11,29 @@ html {
 .container {
   width: 100%;
   height: 100%;
-  display: inline-flex;
-  flex-flow: row wrap;
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: column;
 }
 .buttonsContainer {
-  position: absolute;
-  right: 0;
+  visibility: visible;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  z-index: 1;
   width: 30%;
-  height: 50%;
+  height: 30%;
   background-color: rgb(255, 255, 255);
   border: 3px solid black;
   border-radius: 50px;
+  grid-area: 1/2/3/2;
 }
 .character {
+  z-index: 1;
   width: 100%;
+  grid-area: 1/1/3/4;
+
   box-sizing: border-box;
 }
 .character > img {
@@ -61,4 +70,18 @@ hr {
   100% {
     opacity: 1;
   }
+}
+
+.formularioContainer {
+  /* grid-area:
+  <name> | <row-start>
+  / <column-start> /
+  <row-end> / <column-end>; */
+  z-index: 5;
+  width: 70%;
+  height: 50%;
+  /*  cambiar a grid-area: 1/2/6/5; */
+  grid-area: 2/2/6/5;
+  background-color: white;
+  border: 5px solid black;
 }
