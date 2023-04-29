@@ -20,6 +20,7 @@ window.onload = () => {
 
   cerrarIcon.addEventListener("mousedown", () => {
     cerrarBehavior();
+    formulario.style.gridArea = "2/2/5/5";
   });
   function cerrarBehavior() {
     formulario.style.visibility = "hidden";

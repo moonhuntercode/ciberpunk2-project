@@ -21,6 +21,7 @@ html {
 }
 .buttonsContainer {
   visibility: visible;
+  overflow: hidden;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
@@ -42,7 +43,9 @@ html {
 .character > img {
   width: 100%;
 }
-
+#corazoncito {
+  width: 100%;
+}
 #corazoncito:hover {
   transform: scale(1.3);
   cursor: pointer;
@@ -60,7 +63,7 @@ html {
 }
 
 #estrellita {
-  width: 50px;
+  width: 100%;
 }
 #estrellita:hover {
   cursor: pointer;
@@ -109,6 +112,7 @@ hr {
   grid-area: 2/2/5/5;
   visibility: hidden;
   /* border: 5px solid black; */
+  overflow: visible;
 }
 
 .formularioContainer svg {
@@ -131,4 +135,13 @@ hr {
 }
 #cambiaColorYelllow:active {
   transform: scale(1.2);
+}
+
+.content {
+  grid-area: 2/2/4/3;
+  z-index: 1;
+
+  font-size: x-large;
+  width: 100%;
+  height: 100%;
 }
